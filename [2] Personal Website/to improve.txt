@@ -1,0 +1,18 @@
+-font , bold
+-background ?
+-text color
+-profile photo change into CIRCLE
+-more info all about me (
+-paragraph shows upon HOVER
+-icons per section of info
+
+
+bubbles:
+-Contact
+-Basic Info
+-About
+-Hobby
+
+
+
+icon

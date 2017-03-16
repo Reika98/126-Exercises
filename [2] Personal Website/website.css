@@ -1,0 +1,211 @@
+body {
+    font-family: Courier New, Courier, monospace;
+}
+
+
+
+button:hover + .info {
+    display: block;
+}
+
+.circle-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+}
+
+.minibuttons {
+    background-color: white;
+    border-radius: 50%;  
+    cursor: pointer;
+    width: 5%;
+    height: auto;
+}
+
+#contacts {
+    position: absolute;
+    top: 38%;
+    left: 58%;
+}
+
+#contacts:hover {
+    background-color: yellow;
+    border-radius: 50%;  
+    width: 6%;
+    height: auto;
+    font-size: 4vw;
+}
+
+#contacts:hover + #contacts-info {
+    display: block;
+}
+
+#basic {
+    position: absolute;
+    top: 38%;
+    left: 37%;
+}
+
+#basic:hover {
+    background-color: lightskyblue;
+    border-radius: 50%;  
+    width: 6%;
+    height: auto;
+}
+
+#basic:hover + #basic-info {
+    display: block;
+}
+
+#about {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+}
+
+#about:hover {
+    background-color: lightgreen;
+    border-radius: 50%;  
+    width: 6%;
+    height: auto;
+}
+
+#about:hover + #about-info {
+    display: block;
+}
+
+#hobby {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+}
+
+#hobby:hover {
+    background-color: pink;
+    border-radius: 50%;  
+    width: 6%;
+    height: auto;
+}
+
+#hobby:hover + #hobby-info {
+    display: block;
+}
+
+h2 {
+    color: black;
+}
+
+#name {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    left: 28%;
+    top: 10%;
+}
+
+#name dialog {
+    max-width: 100%;
+    height: auto;
+}
+
+.name-text {
+    position: absolute;
+    max-width: auto;
+    top: 10%;
+    left: 20%;
+}
+
+#profile {
+    height: 150px;
+    max-width: 150px;
+
+    border: 5px solid black;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+}
+
+#profile:hover {
+    height: 200px;
+    max-width: 200px;
+}
+
+.info {
+    display: none;
+}
+
+#contacts-info:hover {
+    display: block;
+    color: black;
+    
+}
+
+#contacts-info ul {
+    position: fixed;
+    top: 35%;
+    left: 65%;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.info p {
+    color: black;
+    position: absolute;
+    top: 34%;
+    left: 0%;
+
+    font-size: 20px;
+}
+
+body:hover {
+    display: block;
+     color: black;
+}
+
+
+#about-info p {
+    font-size: 17px;
+    position: fixed;
+    top: 45%;
+    left: 7%;
+
+}
+
+#basic-info:hover {
+    display: block;
+    color: black;
+
+    position: fixed;
+    top: 15%;
+    left: 58%;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#basic-info p {
+    font-size: 18px;
+    position: fixed;
+    top: 34%;
+    left: 16%;
+}
+
+#hobby-info:hover {
+    display: block;
+    color: black;
+}
+
+#hobby-info ul {
+    position: fixed;
+    top: 47%;
+    left: 65%;
+    font-size: 20px;
+    line-height: 20px;
+}

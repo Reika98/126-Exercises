@@ -35,7 +35,7 @@ function parseUri(uri) {
             
             if(str.indexOf("?") > 0 || str.indexOf("#") > 0) {
                 var flag;
-                if(str.indexOf("?") < str.indexOf("#")) {
+                if(str.indexOf("?") >=0 && str.indexOf("?") < str.indexOf("#")) {
                     flag = 0;
                     end = str.indexOf("?");
                 }
