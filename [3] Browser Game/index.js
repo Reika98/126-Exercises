@@ -126,7 +126,6 @@ function drawCircles() {
 
 var screen_width = window.innerWidth-20;
 var screen_height = window.innerHeight-20;
-var flag = 1;
 var score;
 
 function draw() {
@@ -135,7 +134,6 @@ function draw() {
         score += 2;
         $("#canvas").unbind('click');
         play();
-        //flag = 3;
     }
     else {
         context.clearRect(0, 0, screen_width, screen_height);
@@ -146,7 +144,6 @@ function draw() {
         }
         if(gameover == false) {
             requestAnimationFrame(draw);
-            flag = 0;
         }
         else {
             console.log("GAME OVER")
@@ -230,7 +227,6 @@ var t = document.createTextNode("Play");
 
 btn.addEventListener("click", function(){
     game();
-    //flag = 2;
 } );        
 
 // function playPattern() {
@@ -324,7 +320,6 @@ function game() {
     curr_index = 0;
     curr_note = notes[curr_index];
     gameover = false;
-    flag = 0;
     setScreen();
     $("#canvas").click(handleMouseDown);
     drawCircles();
@@ -343,29 +338,11 @@ function play() {
         level++;
     } console.log("LEVEL: " + level);
     showPattern();
-    // if(flag == 0) {
-    //     showPattern();
-    //     if(flag == 2) { 
-    //         game();
-    //         if(flag == 3)
-    //             play();
-    //     }
-    // }
     
 }
 
 function start() { 
     showMenu();
-
-    
-   
-        // resizeScreen(screen_width,200);
-        // showPattern();
-        // setTimeout(function(){flag = 2}, 5000);
-        // if(flag == 2)
-        //     game();
-        //do{} while(flag == 0);
-
 }
 
 
