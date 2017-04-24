@@ -227,10 +227,7 @@ var notes;
 
 var btn = document.createElement("BUTTON");  
 var t = document.createTextNode("Play"); 
-btn.appendChild(t);      
-btn.style.width = screen.width-17;
-btn.style.height = 30;
-btn.style.background = "transparent";
+
 btn.addEventListener("click", function(){
     game();
     //flag = 2;
@@ -284,9 +281,13 @@ function showPattern() {
     var text = "Level "+ level + " \n ";
     context.fillText(text,(screen_width/2)-(text.length/2)*10,50);
 
-    
     drawPattern();
     //playPattern();
+
+    btn.appendChild(t);      
+    btn.style.width = screen.width-17;
+    btn.style.height = 30;
+    btn.style.background = "transparent";
     document.body.appendChild(btn);  
     
 }
@@ -317,6 +318,8 @@ function updateNote() {
 }
 
 function game() {
+    btn.removeChild(t);
+    btn.parentNode.removeChild(btn);
     circles = [];
     curr_index = 0;
     curr_note = notes[curr_index];
@@ -373,6 +376,7 @@ var text;
 function showMenu() {
     setScreen();
     text = "Round Colored Notes";
+
     menuCircles = [];
     var circle = new Circle(screen_width/4, 1, 50, screen_width/2, 300,getRandomInt(0, colors.length));
     menuCircles.push(circle);
@@ -380,12 +384,12 @@ function showMenu() {
     circle = new Circle(screen_width/4, 1, 50, screen_width/2, 300,getRandomInt(0, colors.length));
     menuCircles.push(circle);
     circle.sign = 1;
+
     what = 0;
     game_na = false;
+
     drawSingleCircle();
     $("#canvas").click(handleMouseDownonMenu);
-    
-
 }
 
 var game_na = false;
@@ -408,8 +412,9 @@ function drawSingleCircle() {
             initialize_game();
             play();
         }
-        else if(what == 1)
+        else if(what == 1) {
             start();
+        }
     }
 }
 
@@ -459,6 +464,7 @@ function handleMouseDownonMenu(e){
 }
 
 function showScore() {
+
     game_na = false;
     setScreen();  
     what = 1;
